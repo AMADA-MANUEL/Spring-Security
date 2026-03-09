@@ -18,14 +18,22 @@ public class SpringSecurityAuthentication {
     public InMemoryUserDetailsManager userDetailsManager(){
         //start building user details
         User.UserBuilder users = User.withDefaultPasswordEncoder();
-//the inmemory user details overrides the username and password
+
         UserDetails userOne = users
                 .username("testUserOne")
                 .password("password")
                 .roles("USER")
                 .build();
 
-        return new InMemoryUserDetailsManager(userOne);
+
+        UserDetails userTwo = users
+                .username("testUserTwo")
+                .password("passwordtwo")
+                .roles("USER")
+                .build();
+
+
+        return new InMemoryUserDetailsManager(userOne , userTwo);
     }
 
 
