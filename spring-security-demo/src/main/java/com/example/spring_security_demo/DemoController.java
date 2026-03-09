@@ -34,6 +34,23 @@ public class DemoController {
         return "<h1>Spring Security Test Demo Successfully</h1>";
     }
 
+    @GetMapping("/one")
+    public String getDemoOne(){
+        return "<h1>Spring Security Test Demo Successfully</h1>";
+    }
+
+    @GetMapping("/two")
+    public String getDemoTwo(){
+        return "<h1>Spring Security Test Demo Successfully</h1>";
+    }
+
+    @GetMapping("/three")
+    public String getDemoThree(){
+        return "<h1>Spring Security Test Demo Successfully</h1>";
+    }
+
+
+
 }
 
 
