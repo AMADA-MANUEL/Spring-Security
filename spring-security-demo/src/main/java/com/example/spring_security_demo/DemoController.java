@@ -34,19 +34,21 @@ public class DemoController {
         return "<h1>Spring Security Test Demo Successfully</h1>";
     }
 
+
+    //adding more urls
     @GetMapping("/one")
     public String getDemoOne(){
-        return "<h1>Spring Security Test Demo Successfully</h1>";
+        return "<h1>Spring Security Test Demo One Successfully</h1>";
     }
 
     @GetMapping("/two")
     public String getDemoTwo(){
-        return "<h1>Spring Security Test Demo Successfully</h1>";
+        return "<h1>Spring Security Test Demo Two Successfully</h1>";
     }
 
     @GetMapping("/three")
     public String getDemoTThree(){
-        return "<h1>Spring Security Test Demo Successfully</h1>";
+        return "<h1>Spring Security Test Demo Three Successfully</h1>";
     }
 
 
