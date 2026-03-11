@@ -22,7 +22,7 @@ public class SpringSecurityAuthentication {
     public SecurityFilterChain securityFilterChain(HttpSecurity http)throws Exception{
 //inside the method I need to define the behaviour of this HTTP security
         http.authorizeHttpRequests(
-                (req) -> req.requestMatchers("/demo","/demo/one").permitAll().anyRequest().authenticated()
+                (req) -> req.requestMatchers("/","/demo/one").permitAll().anyRequest().authenticated()
                 //formLogin Enables the default login page.
                 //permitAll() Allows any user to access the login page.
                 //Without permitAll(), the login page itself could be blocked.
