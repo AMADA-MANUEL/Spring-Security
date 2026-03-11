@@ -16,11 +16,19 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SpringSecurityAuthentication {
 //we want to secure two urls
     @Bean
+
+
+    //SecurityFilterChain tells Spring Security how to protect your HTTP endpoints (URLs).
     public SecurityFilterChain securityFilterChain(HttpSecurity http)throws Exception{
 //inside the method I need to define the behaviour of this HTTP security
         http.authorizeHttpRequests(
-                (req) -> req.antMatchers("/demo","/demo/one")
-        )
+                (req) -> req.requestMatchers("/demo","/demo/one").permitAll().anyRequest().authenticated()
+                //formLogin Enables the default login page.
+                //permitAll() Allows any user to access the login page.
+                //Without permitAll(), the login page itself could be blocked.
+        ).formLogin(form -> form.permitAll());
+
+        return http.build();
     }
 
     //bean is for handling the in memory users
