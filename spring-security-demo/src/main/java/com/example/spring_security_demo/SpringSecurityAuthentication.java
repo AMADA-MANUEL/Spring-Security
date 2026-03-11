@@ -31,6 +31,7 @@ public class SpringSecurityAuthentication {
         return http.build();
     }
 
+
     //bean is for handling the in memory users
     @Bean
     //this method should return in memory ...
